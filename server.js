@@ -10,13 +10,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Serve static files (your HTML, CSS)
 app.use(express.static('public'));
 
-// MongoDB connection (use MongoDB Atlas or a local MongoDB instance)
-mongoose.connect('mongodb://localhost:27017/instagram', {
+// MongoDB connection (use MongoDB Atlas connection string)
+const mongoURI = 'mongodb+srv://mubashirkp:hDw6ET5kLQJN1Ixv@mubashir.7v1og.mongodb.net/instagram';
+
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-.then(() => console.log('Connected to MongoDB'))
-.catch(err => console.log('Failed to connect to MongoDB', err));
+.then(() => console.log('Connected to MongoDB Atlas'))
+.catch(err => console.log('Failed to connect to MongoDB Atlas', err));
 
 // MongoDB Schema and Model for User
 const userSchema = new mongoose.Schema({
