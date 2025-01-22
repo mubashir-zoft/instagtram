@@ -13,10 +13,7 @@ app.use(express.static('public'));
 // MongoDB connection (use MongoDB Atlas connection string)
 const mongoURI = 'mongodb+srv://mubashirkp:hDw6ET5kLQJN1Ixv@mubashir.7v1og.mongodb.net/instagram';
 
-mongoose.connect(mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(mongoURI)
 .then(() => console.log('Connected to MongoDB Atlas'))
 .catch(err => console.log('Failed to connect to MongoDB Atlas', err));
 
