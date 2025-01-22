@@ -13,7 +13,7 @@ app.use(express.static('public'));
 // MongoDB connection (use MongoDB Atlas connection string)
 const mongoURI = 'mongodb+srv://mubashirkp:hDw6ET5kLQJN1Ixv@mubashir.7v1og.mongodb.net/instagram';
 
-mongoose.connect(mongoURI)
+mongoose.connect(mongoURI,{ serverSelectionTimeoutMS: 30000})
 .then(() => console.log('Connected to MongoDB Atlas'))
 .catch(err => console.log('Failed to connect to MongoDB Atlas', err));
 
@@ -37,11 +37,11 @@ app.post('/login', (req, res) => {
 
     newUser.save()
         .then(() => {
-            res.send('User data saved successfully!');
+            res.send('welcome');
         })
         .catch((error) => {
             console.error('Error saving user:', error);
-            res.send('Error saving user to the database.');
+            res.send('Please try again later');
         });
 });
 
