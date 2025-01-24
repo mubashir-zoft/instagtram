@@ -1,65 +1,96 @@
+/* Resetting margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #ffffff;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.login-container {
+    background-color: #000;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
     width: 300px;
-}
-
-.login-form {
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
 }
 
 h1 {
     font-family: 'Billabong', cursive;
-    font-size: 40px;
-    text-align: center;
-    color: #3f729b;
+    font-size: 48px;
+    color: #fff;
     margin-bottom: 20px;
 }
 
 input {
+    width: 100%;
     padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #dbdbdb;
+    margin: 10px 0;
+    border: 1px solid #333;
     border-radius: 5px;
+    background-color: #121212;
+    color: #fff;
 }
 
 button {
-    background-color: #3f729b;
-    color: white;
+    width: 100%;
     padding: 10px;
+    margin: 10px 0;
     border: none;
     border-radius: 5px;
-    margin: 5px 0;
     cursor: pointer;
-}
-
-div.divider {
-    text-align: center;
-    margin: 10px 0;
-    color: #b0b0b0;
+    font-size: 14px;
 }
 
 .facebook-login {
     background-color: #4267B2;
+    color: #fff;
+    font-weight: bold;
+}
+
+.login-btn {
+    background-color: #0095f6;
+    color: #fff;
+    font-weight: bold;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+.divider .line {
+    border: none;
+    height: 1px;
+    background-color: #8e8e8e;
+    flex: 1;
+    margin: 0 10px;
 }
 
 a {
-    color: #3f729b;
+    color: #0095f6;
     text-decoration: none;
+    font-size: 14px;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+.signup-section {
+    margin-top: 20px;
+    font-size: 14px;
 }
